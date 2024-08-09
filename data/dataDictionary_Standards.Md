@@ -1,4 +1,4 @@
-**Overview**: This spreadsheet contains NIRS spectra and compositional data from aqueous XOS and monomeric xylose standards. Each row is the average of duplicate scans.
+**Overview**: The spreadsheet, 'Standards.xlsx', contains NIRS spectra and compositional data from aqueous XOS and monomeric xylose standards. Each row is the average of duplicate scans.
 * **sample**: this is a numeric unique identified for each observation
 * **xylose_free**: concentration (g/L) of monomeric xylose in liquor sample, as measured by HPLC
 * **xos**: concentration (g/L) of xylo-oligomers in liquor sample, as measured by analytical hydrolysis and HPLC 
