@@ -1,0 +1,25 @@
+"","parameters","values","constituent","modelname","samplinglocation","n"
+"1","R2-cal",0.99,"solids (g/L)","full spectra, location splitting","early/waste",58
+"2","RMSEC",0.3,"solids (g/L)","full spectra, location splitting","early/waste",58
+"3","R2-CV",0.46,"solids (g/L)","full spectra, location splitting","early/waste",58
+"4","RMSECV",2.26,"solids (g/L)","full spectra, location splitting","early/waste",58
+"5","R2-test",0.69,"solids (g/L)","full spectra, location splitting","early/waste",24
+"6","RMSEP",0.97,"solids (g/L)","full spectra, location splitting","early/waste",24
+"7","R2-cal",1,"solids (g/L)","full spectra, location splitting","late",29
+"8","RMSEC",3.72,"solids (g/L)","full spectra, location splitting","late",29
+"9","R2-CV",1,"solids (g/L)","full spectra, location splitting","late",29
+"10","RMSECV",4.08,"solids (g/L)","full spectra, location splitting","late",29
+"11","R2-test",0.99,"solids (g/L)","full spectra, location splitting","late",12
+"12","RMSEP",5.02,"solids (g/L)","full spectra, location splitting","late",12
+"13","R2-cal",0.99,"solids (g/L)","2100-2450nm spectra, location splitting","early/waste",58
+"14","RMSEC",0.25,"solids (g/L)","2100-2450nm spectra, location splitting","early/waste",58
+"15","R2-CV",0.71,"solids (g/L)","2100-2450nm spectra, location splitting","early/waste",58
+"16","RMSECV",1.5,"solids (g/L)","2100-2450nm spectra, location splitting","early/waste",58
+"17","R2-test",0.62,"solids (g/L)","2100-2450nm spectra, location splitting","early/waste",24
+"18","RMSEP",1.14,"solids (g/L)","2100-2450nm spectra, location splitting","early/waste",24
+"19","R2-cal",1,"solids (g/L)","2100-2450nm  spectra, location splitting","late",29
+"20","RMSEC",3.77,"solids (g/L)","2100-2450nm  spectra, location splitting","late",29
+"21","R2-CV",1,"solids (g/L)","2100-2450nm  spectra, location splitting","late",29
+"22","RMSECV",4.04,"solids (g/L)","2100-2450nm  spectra, location splitting","late",29
+"23","R2-test",0.99,"solids (g/L)","2100-2450nm  spectra, location splitting","late",12
+"24","RMSEP",5.49,"solids (g/L)","2100-2450nm  spectra, location splitting","late",12

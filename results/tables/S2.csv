@@ -1,0 +1,37 @@
+"","parameters","values","constituent","modelname","samplinglocation","n"
+"1","R2-cal",0.18,"xylose_free (g/L)","no location splitting","early/waste",58
+"2","RMSEC",0.25,"xylose_free (g/L)","no location splitting","early/waste",58
+"3","R2-CV",0.03,"xylose_free (g/L)","no location splitting","early/waste",58
+"4","RMSECV",0.29,"xylose_free (g/L)","no location splitting","early/waste",58
+"5","R2-test",0.02,"xylose_free (g/L)","no location splitting","early/waste",24
+"6","RMSEP",0.24,"xylose_free (g/L)","no location splitting","early/waste",24
+"7","R2-cal",0.55,"xylose_free (g/L)","no location splitting","late",29
+"8","RMSEC",0.24,"xylose_free (g/L)","no location splitting","late",29
+"9","R2-CV",0.34,"xylose_free (g/L)","no location splitting","late",29
+"10","RMSECV",0.29,"xylose_free (g/L)","no location splitting","late",29
+"11","R2-test",0.24,"xylose_free (g/L)","no location splitting","late",12
+"12","RMSEP",0.37,"xylose_free (g/L)","no location splitting","late",12
+"13","R2-cal",0.3,"xylose_free (g/L)","location splitting","early/waste",58
+"14","RMSEC",0.23,"xylose_free (g/L)","location splitting","early/waste",58
+"15","R2-CV",0.06,"xylose_free (g/L)","location splitting","early/waste",58
+"16","RMSECV",0.27,"xylose_free (g/L)","location splitting","early/waste",58
+"17","R2-test",0.03,"xylose_free (g/L)","location splitting","early/waste",24
+"18","RMSEP",0.22,"xylose_free (g/L)","location splitting","early/waste",24
+"19","R2-cal",0.53,"xylose_free (g/L)","location splitting","late",29
+"20","RMSEC",0.24,"xylose_free (g/L)","location splitting","late",29
+"21","R2-CV",0.25,"xylose_free (g/L)","location splitting","late",29
+"22","RMSECV",0.31,"xylose_free (g/L)","location splitting","late",29
+"23","R2-test",0.3,"xylose_free (g/L)","location splitting","late",12
+"24","RMSEP",0.36,"xylose_free (g/L)","location splitting","late",12
+"25","R2-cal",0.47,"xylose_free (g/L)","2100-2450nm spectra, location splitting","early/waste",58
+"26","RMSEC",0.2,"xylose_free (g/L)","2100-2450nm spectra, location splitting","early/waste",58
+"27","R2-CV",0.05,"xylose_free (g/L)","2100-2450nm spectra, location splitting","early/waste",58
+"28","RMSECV",0.29,"xylose_free (g/L)","2100-2450nm spectra, location splitting","early/waste",58
+"29","R2-test",0.04,"xylose_free (g/L)","2100-2450nm spectra, location splitting","early/waste",24
+"30","RMSEP",0.26,"xylose_free (g/L)","2100-2450nm spectra, location splitting","early/waste",24
+"31","R2-cal",0.93,"xylose_free (g/L)","2100-2450nm  spectra, location splitting","late",29
+"32","RMSEC",0.09,"xylose_free (g/L)","2100-2450nm  spectra, location splitting","late",29
+"33","R2-CV",0.57,"xylose_free (g/L)","2100-2450nm  spectra, location splitting","late",29
+"34","RMSECV",0.24,"xylose_free (g/L)","2100-2450nm  spectra, location splitting","late",29
+"35","R2-test",0.32,"xylose_free (g/L)","2100-2450nm  spectra, location splitting","late",12
+"36","RMSEP",0.37,"xylose_free (g/L)","2100-2450nm  spectra, location splitting","late",12

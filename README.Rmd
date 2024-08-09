@@ -1,0 +1,49 @@
+---
+title: "xos_ms_dataandcode"
+author: "Zofia Tillman"
+date: "`r Sys.Date()`"
+output:
+  github_document:
+    html_preview: false
+---
+
+Data and code used to run analysis and create visualizations/tables for 'Rapid measurement of soluble xylo-oligomers using near-infrared spectroscopy (NIRS) and multivariate statistics: calibration model
+development and practical approaches to model optimization' (Biotechnology for Biofuels and Bioproducts 2024, https://doi.org/10.1186/s13068-024-02558-6)
+
+## How to Reproduce Analysis
+
+1. Open R studio and change to version 4.2.3 via *Tools -> Global Options -> R version -> Change...*
+3. In R studio, source,  `./code/runAnalysis.R` 
+
+```{r library_calls, message=FALSE, echo=FALSE, warning = FALSE}
+library(tidyverse)
+library(pls)
+library(prospectr)
+library(ggfortify)
+library(ggpmisc)
+library(openxlsx)
+library(ggh4x)
+library(ggmagnify)
+library(egg)
+library(patchwork)
+```
+## Dependencies
+
+* `r R.version.string`
+  * `tidyverse` (v. `r packageVersion("tidyverse")`)
+  * `pls` (v. `r packageVersion("pls")`)
+  * `prospectr` (v. `r packageVersion("prospectr")`)
+  * `ggfortify` (v. `r packageVersion("ggfortify")`)
+  * `ggpmisc` (v. `r packageVersion("ggpmisc")`)
+  * `rmarkdown` (v. `r packageVersion("rmarkdown")`)
+  * `openxlsx` (v. `r packageVersion("openxlsx")`)
+  * `ggh4x` (v. `r packageVersion("ggh4x")`)
+  * `ggmagnify` (v. `r packageVersion("ggmagnify")`)
+  * `patchwork` (v. `r packageVersion("patchwork")`)
+  * `egg` (v. `r packageVersion("egg")`)
+  
+
+## My Computer
+```{r sessioninfo, echo=FALSE}
+sessionInfo()
+```

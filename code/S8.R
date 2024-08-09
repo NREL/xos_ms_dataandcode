@@ -1,0 +1,140 @@
+# Code to develop •	Figure S8 contains predicted vs measured and predicted vs residual plots for the early sample set only earlyWaste full spectra
+#model’s measurement of solids in the calibration, cross validation, and independent validation sets
+
+
+#load packages
+library(tidyverse)
+library(pls)
+library(prospectr)
+library(ggfortify)
+library(patchwork)
+library(ggpmisc) 
+pallette  <- c("#000000", "#DDAA33",  "#BB5566","#004488")
+
+
+#load testing and training data from each model
+part1_earlyWasteDataSet_testing <- readRDS("../data/processed/part1_earlyWasteDataSet_testing.RDS")
+part1_earlyWasteDataSet_training <- readRDS("../data/processed/part1_earlyWasteDataSet_training.RDS")
+
+
+
+part1_earlyWasteDataSet_testing <- part1_earlyWasteDataSet_testing %>% 
+  mutate(grouping = factor(grouping , levels = c("early/waste", "late"), labels = c("A: Early/Waste Stream Sampling Locations", "B: Late Stream Sampling Locations"))) %>% 
+  mutate(groupingType = factor(groupingType, levels = c("early","waste","late")))
+
+part1_earlyWasteDataSet_training <- part1_earlyWasteDataSet_training %>% 
+  mutate(grouping = factor(grouping , levels = c("early/waste", "late"), labels = c("A: Early/Waste Stream Sampling Locations", "B: Late Stream Sampling Locations"))) %>% 
+  mutate(groupingType = factor(groupingType, levels = c("early","waste","late")))
+
+
+
+
+a <- part1_earlyWasteDataSet_training %>% ggplot(aes(x=solids, y =solids_cal, col = groupingType))+geom_point(size = 4, alpha = .7)+geom_abline(slope = 1)+theme_bw()+
+  labs(x="Measured [solids] (g/L)",
+       y= "Predicted [solids] (g/L)",
+       title = "Calibration")+
+  theme(legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        strip.text= element_text(colour = "black", size =9, face =2, hjust = 0),
+        strip.background = element_blank(),
+        legend.key.height = unit(1,"mm"),
+        legend.position = "bottom",
+        title = element_text(colour = "black", size =9.5, face =2, hjust = 0.5),
+        panel.background = element_rect(fill = "white",colour = "black", size = 0.5, linetype = "solid"),
+        panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "lightgrey"))+
+  scale_shape_manual(values = c(1,19,2), name = "Model")+
+  expand_limits(x = c(-1.5, 20), y =  c(-1.5, 20) )+scale_color_manual(values = pallette[2:4], name = "Process Sampling Location")
+a
+b <- part1_earlyWasteDataSet_training %>% ggplot(aes(x=solids_cal, y =solids_cal-solids, col = groupingType))+geom_point(size = 4, alpha = .7)+geom_hline(yintercept = 0)+theme_bw()+
+  labs(x="Predicted [solids] (g/L)",
+       y= "Predicted - Measured [solids] (g/L)"
+  )+
+  theme(legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        strip.text= element_text(colour = "black", size =9, face =2, hjust = 0),
+        strip.background = element_blank(),
+        legend.key.height = unit(1,"mm"),
+        legend.position = "bottom",
+        title = element_text(colour = "black", size =9.5, face =2, hjust = 0.5),
+        panel.background = element_rect(fill = "white",colour = "black", size = 0.5, linetype = "solid"),
+        panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "lightgrey"))+
+  scale_shape_manual(values = c(1,19,2), name = "Model")+
+  expand_limits(
+     x = c(-1.5, 20), y =  c(-10,10) )+scale_color_manual(values = pallette[2:4], name = "Process Sampling Location")
+
+b
+a+b
+c <- part1_earlyWasteDataSet_training %>% ggplot(aes(x=solids, y =solids_cv, col = groupingType))+geom_point(size = 4, alpha = .7)+geom_abline(slope = 1)+theme_bw()+
+  labs(x="Measured [solids] (g/L)",
+       y= "Predicted [solids] (g/L)",
+       title = "Cross Validation")+
+  theme(legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        strip.text= element_text(colour = "black", size =9, face =2, hjust = 0),
+        strip.background = element_blank(),
+        legend.key.height = unit(1,"mm"),
+        legend.position = "bottom",
+        title = element_text(colour = "black", size =9.5, face =2, hjust = 0.5),
+        panel.background = element_rect(fill = "white",colour = "black", size = 0.5, linetype = "solid"),
+        panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "lightgrey"))+
+  scale_shape_manual(values = c(1,19,2), name = "Model")+
+  expand_limits(
+    x = c(-1.5, 20), y =  c(-1.5, 20) )+scale_color_manual(values = pallette[2:4], name = "Process Sampling Location")
+a
+d <- part1_earlyWasteDataSet_training %>% ggplot(aes(x=solids_cv, y =solids_cv-solids, col = groupingType))+geom_point(size = 4, alpha = .7)+geom_hline(yintercept = 0)+theme_bw()+
+  labs(x="Predicted [solids] (g/L)",
+       y= "Predicted - Measured [solids] (g/L)"
+  )+
+  theme(legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        strip.text= element_text(colour = "black", size =9, face =2, hjust = 0),
+        strip.background = element_blank(),
+        legend.key.height = unit(1,"mm"),
+        legend.position = "bottom",
+        title = element_text(colour = "black", size =9.5, face =2, hjust = 0.5),
+        panel.background = element_rect(fill = "white",colour = "black", size = 0.5, linetype = "solid"),
+        panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "lightgrey"))+
+  scale_shape_manual(values = c(1,19,2), name = "Model")+
+  expand_limits(
+     x = c(-1.5, 20), y =  c(-10,10) )+scale_color_manual(values = pallette[2:4], name = "Process Sampling Location")
+d
+e <- part1_earlyWasteDataSet_testing %>% ggplot(aes(x=solids, y =solids_val, col = groupingType))+geom_point(size = 4, alpha = .7)+geom_abline(slope = 1)+theme_bw()+
+  labs(x="Measured [solids] (g/L)",
+       y= "Predicted [solids] (g/L)",
+       title = "Independent Validation")+
+  theme(legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        strip.text= element_text(colour = "black", size =9, face =2, hjust = 0),
+        strip.background = element_blank(),
+        legend.key.height = unit(1,"mm"),
+        legend.position = "bottom",
+        title = element_text(colour = "black", size =9.5, face =2, hjust = 0.5),
+        panel.background = element_rect(fill = "white",colour = "black", size = 0.5, linetype = "solid"),
+        panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "lightgrey"))+
+  scale_shape_manual(values = c(1,19,2), name = "Model")+
+  expand_limits(
+    x = c(-1.5, 20), y =  c(-1.5, 20) )+scale_color_manual(values = pallette[2:4], name = "Process Sampling Location")
+a
+f<- part1_earlyWasteDataSet_testing %>% ggplot(aes(x=solids_val, y =solids_val-solids, col = groupingType))+geom_point(size = 4, alpha = .7)+geom_hline(yintercept = 0)+theme_bw()+
+  labs(x="Predicted [solids] (g/L)",
+       y= "Predicted - Measured [solids] (g/L)"
+  )+
+  theme(legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        strip.text= element_text(colour = "black", size =9, face =2, hjust = 0),
+        strip.background = element_blank(),
+        legend.key.height = unit(1,"mm"),
+        legend.position = "bottom",
+        title = element_text(colour = "black", size =9.5, face =2, hjust = 0.5),
+        panel.background = element_rect(fill = "white",colour = "black", size = 0.5, linetype = "solid"),
+        panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "lightgrey"))+
+  scale_shape_manual(values = c(1,19,2), name = "Model")+
+  expand_limits(
+     x = c(-1.5, 20), y =  c(-10,10) )+scale_color_manual(values = pallette[2:4], name = "Process Sampling Location")
+
+g <- (a+b)/(c+d)/(e+f)
+
+h <- g&theme(legend.position = "bottom")
+h+plot_layout(guides = "collect")
+
+ggsave("../results/figures/S8.tiff", width  = 180, height = 240, units = "mm", compression = "lzw")

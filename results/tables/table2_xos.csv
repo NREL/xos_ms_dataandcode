@@ -1,0 +1,25 @@
+"","parameters","values","constituent","modelname","samplinglocation","n"
+"1","R2-cal",0.49,"XOS (g/L)","no location splitting","early/waste",58
+"2","RMSEC",1.93,"XOS (g/L)","no location splitting","early/waste",58
+"3","R2-CV",0.15,"XOS (g/L)","no location splitting","early/waste",58
+"4","RMSECV",3.31,"XOS (g/L)","no location splitting","early/waste",58
+"5","R2-test",0.35,"XOS (g/L)","no location splitting","early/waste",24
+"6","RMSEP",1.44,"XOS (g/L)","no location splitting","early/waste",24
+"7","R2-cal",1,"XOS (g/L)","no location splitting","late",29
+"8","RMSEC",4.64,"XOS (g/L)","no location splitting","late",29
+"9","R2-CV",0.99,"XOS (g/L)","no location splitting","late",29
+"10","RMSECV",5.08,"XOS (g/L)","no location splitting","late",29
+"11","R2-test",0.99,"XOS (g/L)","no location splitting","late",12
+"12","RMSEP",5.72,"XOS (g/L)","no location splitting","late",12
+"13","R2-cal",0.97,"XOS (g/L)","location splitting","early/waste",58
+"14","RMSEC",0.24,"XOS (g/L)","location splitting","early/waste",58
+"15","R2-CV",0.46,"XOS (g/L)","location splitting","early/waste",58
+"16","RMSECV",1.16,"XOS (g/L)","location splitting","early/waste",58
+"17","R2-test",0.52,"XOS (g/L)","location splitting","early/waste",24
+"18","RMSEP",0.67,"XOS (g/L)","location splitting","early/waste",24
+"19","R2-cal",1,"XOS (g/L)","location splitting","late",29
+"20","RMSEC",4.17,"XOS (g/L)","location splitting","late",29
+"21","R2-CV",0.99,"XOS (g/L)","location splitting","late",29
+"22","RMSECV",4.7,"XOS (g/L)","location splitting","late",29
+"23","R2-test",0.99,"XOS (g/L)","location splitting","late",12
+"24","RMSEP",4.81,"XOS (g/L)","location splitting","late",12
