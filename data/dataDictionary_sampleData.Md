@@ -1,4 +1,4 @@
-**Overview**: This spreadsheet provides complete compositional and NIR data for liquid samples taken throughout the xylo-oligomer purification process. Each observation represents a sample taken from one location at a given time. Compositional data and NIRS spectra were collected in duplicate and averaged. 
+**Overview**: The spreadsheet, 'sampleData.xlsx' provides complete compositional and NIR data for liquid samples taken throughout the xylo-oligomer purification process. Each observation represents a sample taken from one location at a given time. Compositional data and NIRS spectra were collected in duplicate and averaged. 
 
 * **sample**: Unique sample identifier. Format is YYMMDD### using the date that the sample was initially analyzed on at Prenexus and then a 3 digit number denoting which number sample that sample was on that day.
 * **sampleType**: Describes sample location, as defined in Figure 1 of manuscript
