@@ -1,4 +1,4 @@
-**Overview:** Thi spreadsheet, 'Controls.xlsx' includes control sample data taken throughout the scanning campaign. Each observation is a unique NIR scan of a given control. 
+**Overview:** This spreadsheet, 'Controls.xlsx' includes control sample data taken throughout the scanning campaign. Each observation is a unique NIR scan of a given control. 
 
 * **sample**: Same as ‘Lab sample code’ in primary analytical. Unique sample identifier assigned by Prenexus. Format is YYMMDD### using the date that the sample was initially analyzed on at Prenexus and then a 3 digit number denoting which number sample that sample was on that day.
     *** _Note_**: Reference Samples are labeled differently in this column:
